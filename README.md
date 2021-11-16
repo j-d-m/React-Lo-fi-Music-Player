@@ -1,70 +1,23 @@
-# Getting Started with Create React App
+THINGS I HAVE LEARNED AND GAINED A BETTER UNDERSTANDING OF ALONG THE WAY🧮
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+NPX - is the tool that will download, configure and execute the package
+CREATE-REACT-APP - tool chain that will provide the boilerplate for the react application
+MUSIC-PLAYER-REACT-APP - name of the project.
+//npx create-react-app name of your project
+<------------------------------------------------------------------------------------------------------------>
 
-## Available Scripts
+- you can import font awesome via the html file.
+- to use javascript withing JSX you need to put it in curly brackets
+- a functional component returns a react element that is JSX.
+  <------------------------------------------------------------------------------------------------------------>
 
-In the project directory, you can run:
+using the useState() hook enables you to integrate state into functional component,
+Hooks must always be declared at the top of the function, this helps to preserve the state in all renderings of the component.
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<------------------------------------------------------------------------------------------------------------>
+useEffect() hook tells react that something needs to occur after the first render. React will remember the function you passed and call it after the DOM updates. to this effect we set the document title but we can also fetch data or other API's.
+placing the useEffect() hook inside the component lets us access the count state or props right from the effect(read function). the hook is similar to life-cycle methods in class components, meaning it will run after every render including the initial render. you can think of it as a combination of componentDidMount, componentDidUpdate and componentWillUnmount. remember to control the behavior we should run it only on the initial render or when a specific state changes. We can pass dependencies to the effect to do so ( think the empty array,[] before the end of the hook call). this hook also provides a clean-up option to allow you to clean up functions running in the background before the components life cycle comes to an end.
+<-------------------------------------------------------------------------------------------------------------->
+useRef() hook returns a mutable ref object with the passed argument as its current property (initial value). the returned object will be retained for the duration of the components lifetime.
+<-------------------------------------------------------------------------------------------------------------->
+Props are Arguments passed into react components. the value of props is received from props being sent from one component to another.
