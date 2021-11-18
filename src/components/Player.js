@@ -1,9 +1,10 @@
 /*player is the primary component through which we make our music player function*/
-
+import "../App.css";
 import React from "react";
 //note the import of the other two components
 import PlayerDetails from "./PlayerDetails";
 import PlayerControls from "./PlayerControls";
+
 import { useEffect, useRef, useState } from "react";
 
 export default function Player(props) {
@@ -26,7 +27,7 @@ export default function Player(props) {
         let temp = props.currentSongIndex;
         temp++;
 
-        if (temp > props.song.length - 1) {
+        if (temp > props.songs.length - 1) {
           temp = 0;
         }
         return temp;
@@ -35,7 +36,9 @@ export default function Player(props) {
       props.setCurrentSongIndex(() => {
         let temp = props.currentSongIndex;
         temp--;
-        if (temp > 0) {
+
+        //This was a big problem!!!
+        if (temp < 0) {
           temp = props.song.length - 1;
         }
 
@@ -44,11 +47,11 @@ export default function Player(props) {
     }
   };
 
-  let audioTune = props.songs.map((songs) => {
-    return new Audio(songs.src, "./songs");
-  });
+  // let audioTune = props.songs.map((songs) => {
+  //   return new Audio(songs.src, "./songs");
+  // });
 
-  console.log(audioTune);
+  // console.log(audioTune);
   return (
     <>
       <p>
@@ -76,7 +79,7 @@ export default function Player(props) {
       <div className="music-player">
         {/*embedding the audio element*/}
         <audio
-          src={props.songs[props.currentSongIndex]}
+          src={props.songs[props.currentSongIndex].src}
           ref={audioElement}
         ></audio>
         {/*listing out all the song details*/}
@@ -103,8 +106,8 @@ export default function Player(props) {
             </li>
 
             <li>
-              <a href="/" className="list__link">
-                <i className="fa fa-undo"></i>
+              <a href="#" className="list__link">
+                <i className="fa fa-ellipsis-h"></i>
               </a>
             </li>
 

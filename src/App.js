@@ -4,22 +4,6 @@ import { useState, useEffect } from "react";
 import Player from "./components/Player";
 
 const App = () => {
-  //using the useState hook to integrate state into our functional component
-
-  const [currentSongIndex, setCurrentSongIndex] = useState(0);
-  const [nextSongIndex, setNextSongIndex] = useState(currentSongIndex + 1);
-
-  //using the useEffect hook always check in the background when the current song is finished playing by checking the length of the songs array
-  useEffect(() => {
-    setNextSongIndex(() => {
-      if (currentSongIndex + 1 > songs.length - 1) {
-        return 0;
-      } else {
-        return currentSongIndex + 1;
-      }
-    });
-  }, [currentSongIndex]);
-
   const [songs] = useState([
     {
       title: "$orries", //title of the song
@@ -154,9 +138,25 @@ const App = () => {
       track: "Can We Kiss Forever?",
       year: "1",
       img_src: "./songs_images/Can We Kiss Forever _Cover (front)_e.jpg",
-      src: "./songs/Can We Kiss Forever .mp3",
+      src: "./songs/Can We Kiss Forever.mp3",
     },
   ]);
+
+  //using the useState hook to integrate state into our functional component
+
+  const [currentSongIndex, setCurrentSongIndex] = useState(0);
+  const [nextSongIndex, setNextSongIndex] = useState(currentSongIndex + 1);
+
+  //using the useEffect hook always check in the background when the current song is finished playing by checking the length of the songs array because of the dependency
+  useEffect(() => {
+    setNextSongIndex(() => {
+      if (currentSongIndex + 1 > songs.length - 1) {
+        return 0;
+      } else {
+        return currentSongIndex + 1;
+      }
+    });
+  }, [currentSongIndex]);
 
   return (
     <div className="App">

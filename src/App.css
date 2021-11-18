@@ -38,8 +38,9 @@ body {
   max-width: 30rem;
   background: #fff;
   border-radius: 1.25rem;
-  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.19),
-    0 6px 6px -10px rgba(0, 0, 0, 0.23);
+  box-shadow: 0px 10px 20px -5px rgba(0, 0, 0, 0.19),
+    0 6px 6px -10px rgba(0, 0, 0, 0.23), 0px 10px 20px -5px rgba(0, 0, 0, 0.19);
+  /* border: 2px solid black; */
 }
 
 /* body cover */
@@ -106,6 +107,7 @@ body {
   align-items: center;
   justify-content: center;
   margin-bottom: 35px;
+  /* border: 2px solid black; */
 }
 
 .music-player--controls .play-btn {
@@ -113,7 +115,6 @@ body {
   margin-left: 2rem;
   margin-right: 2rem;
   font-size: 1rem;
-  border: none;
   outline: none;
   background: none;
   border-radius: 50%;
@@ -223,7 +224,7 @@ body {
 
 /* Next songs */
 
-.text-anim {
+.text-animation {
   font-size: 23px;
   font-weight: 550;
   color: black;

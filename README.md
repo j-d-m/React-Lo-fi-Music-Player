@@ -13,6 +13,7 @@ MUSIC-PLAYER-REACT-APP - name of the project.
 
 using the useState() hook enables you to integrate state into functional component,
 Hooks must always be declared at the top of the function, this helps to preserve the state in all renderings of the component.
+to remember things components use state.
 
 <------------------------------------------------------------------------------------------------------------>
 useEffect() hook tells react that something needs to occur after the first render. React will remember the function you passed and call it after the DOM updates. to this effect we set the document title but we can also fetch data or other API's.
